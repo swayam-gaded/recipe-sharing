@@ -25,8 +25,14 @@ submitBtn.addEventListener('click', () => {
 
     const newBox = document.createElement('div');
     newBox.classList.add('recipe-box');
+
     const image = document.createElement('div');
     image.classList.add('image');
+    const defaultImage = document.createElement('img');
+    defaultImage.src = 'img/default.png';
+    defaultImage.alt = newRecipeName + " image";
+    image.appendChild(defaultImage);
+
     const content = document.createElement('div');
     content.classList.add('recipe-content');
     const name = document.createElement('div');
