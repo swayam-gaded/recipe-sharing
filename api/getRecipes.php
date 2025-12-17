@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 require "db.php";
 
-$sql = "SELECT recipe_key, name, description, full_recipe, image_path FROM recipes";
+$sql = "SELECT recipe_key, name, description, full_recipe, image_path, rating_avg, rating_count FROM recipes";
 $result = $conn->query($sql);
 
 $recipes = [];
