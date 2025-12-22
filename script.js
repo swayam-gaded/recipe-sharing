@@ -113,7 +113,7 @@ submitBtn.addEventListener('click', () => {
 });
 
 document.getElementById("Sign-In").addEventListener('click',() => {
-  window.location.href = "sign-in.html"
+  window.location.href = "login.html"
 })
 
 
