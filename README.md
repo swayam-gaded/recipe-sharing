@@ -3,6 +3,10 @@ The reason it was created was due to odin project
 Now it is being driven due to this being my Web EL
 
 # New Changes
+24-12-2025
+
+1. Added the JS files for the login and sign up parts respectively.
+2. Added the backend PHP files to handle connections to the MySQL database and communicate with the login and sign up JS Scripts.
 
 22-12-2025
 
