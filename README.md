@@ -2,6 +2,19 @@
 The reason it was created was due to odin project 
 Now it is being driven due to this being my Web EL
 
+# New Changes
+24-12-2025
+
+1. Added the JS files for the login and sign up parts respectively.
+2. Added the backend PHP files to handle connections to the MySQL database and communicate with the login and sign up JS Scripts.
+
+22-12-2025
+
+1. Added a sign-up/login button in the index.html file.
+2. Added HTML file for the login page and its respective CSS styling file.
+3. Added HTML file for the signup page and its respective CSS styling file.
+
+
 # Learning points 
 # CSS : 
 1. changing the display from none to flex/block - this allows for pop ups to work 

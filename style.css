@@ -11,6 +11,14 @@ body {
 
 }
 
+.Login {
+  position:absolute;
+  background-color: yellow;
+  right: 4px;
+  padding : 10px;
+  margin : 3px;
+}
+
 /* HEAD */
 .head {
     display: flex;
@@ -20,10 +28,12 @@ body {
     justify-content: space-between;
 }
 .heading {
+    position : relative;
     font-size: 32px;
-    font-family: 'Roboto',sans-serif;
+    font-family:'Roboto',sans-serif;
     margin: 0 auto;
     font-weight: bold;
+    height : 40px;
     color: azure;
 }
 .chef {
