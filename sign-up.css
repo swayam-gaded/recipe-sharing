@@ -20,6 +20,7 @@
 }
 
 .signup-info input[type="text"],
+.signup-info input[type = "email"],
 .signup-info input[type="password"] {
   width: 100%;              /* full width inside box */
   padding: 8px;

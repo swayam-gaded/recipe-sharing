@@ -11,6 +11,8 @@ document.getElementById("signup_info").addEventListener("submit", async e => {
     password: password
   }
 
+  checkDuplicate(email_id);
+
   try {
     const response = await fetch("/recipe-sharing/api/addCredentials.php", {
       method: "POST",
@@ -35,8 +37,32 @@ document.getElementById("signup_info").addEventListener("submit", async e => {
     } else {
       alert("Error")
     }
-  } catch(error) {
+  }catch(error) {
     console.error("Error:", error);
     alert("Something went wrong, please try again");
   }
 })
+
+async function checkDuplicate(emailId) {
+  try {
+    const verify_response = await fetch("/recipe-sharing/api/getCredentials.php",{
+      method : "GET",
+      headers : {
+        "Content-Type" : "application/json",
+        "Accept" : "application/json"
+      },
+      body : JSON.stringify({
+        "Email-ID" : emailId
+      })
+    });
+
+    const data = verify_response.json();
+
+    if (data.status == "Duplicate") {
+      alert("This email-ID has already been registered. Please try with another one");
+      window.location.href("/recipe-sharing/sign-up.js");
+    } 
+  } catch(error) {
+    console.log("Error : " + error);
+  }
+}
