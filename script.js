@@ -18,7 +18,7 @@ function createStars(rating, recipeKey) {
     return starsHTML;
 }
 
-fetch("api/getRecipes.php")
+fetch("/recipe-sharing/api/getRecipes.php")
     .then(res => res.json())
     .then(recipes => {
         recipes.forEach(r => {
@@ -32,7 +32,7 @@ fetch("api/getRecipes.php")
 
             box.innerHTML = `
                 <div class="image">
-                    <img src="img/${r.image_path}" alt="${r.name}">
+                    <img src="/recipe-sharing/img/${r.image_path}" alt="${r.name}">
                 </div>
                 <div class="recipe-content">
                     <div class="recipe-name">${r.name}</div>
@@ -91,7 +91,7 @@ submitBtn.addEventListener('click', () => {
         formData.append("image", imageFile);
     }
 
-    fetch("api/addRecipe.php", {
+    fetch("/recipe-sharing/api/addRecipe.php", {
         method: "POST",
         body: formData
     })
@@ -111,6 +111,10 @@ submitBtn.addEventListener('click', () => {
     })
     .catch(err => console.error(err));
 });
+
+document.getElementById("Sign-In").addEventListener('click',() => {
+  window.location.href = "/recipe-sharing/login.html"
+})
 
 
 /*Detailed view feature*/
@@ -148,7 +152,7 @@ document.querySelector(".main").addEventListener("click", (e) => {
         const rating = e.target.dataset.value;
         const recipeKey = e.target.dataset.id;
 
-        fetch("api/rateRecipe.php", {
+        fetch("/recipe-sharing/api/rateRecipe.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

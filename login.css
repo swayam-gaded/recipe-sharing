@@ -1,0 +1,45 @@
+.box {
+  font-size: 1.2rem;
+  margin: 100px auto;       /* centers horizontally */
+  max-width: 400px;         /* responsive width */
+  padding: 20px;
+  background-color: aqua;
+  border-radius: 10px;      /* rounded corners */
+}
+
+.heading {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login_info {
+  font-size: 16px;
+  display: flex;            /* flexbox layout */
+  flex-direction: column;   /* stack items vertically */
+  gap: 15px;                /* spacing between fields */
+}
+
+.login_info input[type="text"],
+.login_info input[type="password"] {
+  width: 100%;              /* full width inside box */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login_info input[type="submit"] {
+  background-color: #0077cc;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login_info input[type="submit"]:hover {
+  background-color: #005fa3; /* hover effect */
+}
+
+a:hover {
+  color: #0077cc;
+}
